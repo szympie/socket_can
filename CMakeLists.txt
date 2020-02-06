@@ -26,6 +26,9 @@ if($ENV{ROS_VERSION} EQUAL 1)
         LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
         RUNTIME DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
     )
+    install(
+            DIRECTORY include/
+            DESTINATION include)
 else()
   cmake_minimum_required(VERSION 3.5)
   project(socket_can)
